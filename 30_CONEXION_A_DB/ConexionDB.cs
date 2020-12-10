@@ -38,5 +38,59 @@ namespace _30_CONEXION_A_DB
             return Ejercicios;
         }
 
+        // Insercion
+        public void Add(Ejercicio ejercicio)
+        {
+            string query = "INSERT INTO ejercicios (nombre, kilos) " +
+                "VALUES (@nombre, @kilos)";
+
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@nombre", ejercicio.nombre);
+                command.Parameters.AddWithValue("@kilos", ejercicio.kilos);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
+        // Edicion
+        public void Edit(Ejercicio ejercicio, int Id)
+        {
+            string query = "UPDATE ejercicios SET nombre = @nombre, kilos = @kilos "+
+                "WHERE id = @Id";
+
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@nombre", ejercicio.nombre);
+                command.Parameters.AddWithValue("@kilos", ejercicio.kilos);
+                command.Parameters.AddWithValue("@Id", Id);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
+        // Eliminación
+        public void Delete(int Id)
+        {
+            string query = "DELETE FROM ejercicios " +
+                "WHERE id = @Id";
+
+            using(var connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Id", Id);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
     }
 }

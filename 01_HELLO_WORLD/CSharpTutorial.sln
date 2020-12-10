@@ -85,6 +85,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "29_INTERFACE", "..\29_INTER
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "30_CONEXION_A_DB", "..\30_CONEXION_A_DB\30_CONEXION_A_DB.csproj", "{746A24FE-5865-4B34-94EE-35407FDAEE27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "37_TRY_CATCH", "..\37_TRY_CATCH\37_TRY_CATCH.csproj", "{AA3B11F5-119E-4B5B-B46D-03533F659006}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -255,6 +257,10 @@ Global
 		{746A24FE-5865-4B34-94EE-35407FDAEE27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{746A24FE-5865-4B34-94EE-35407FDAEE27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{746A24FE-5865-4B34-94EE-35407FDAEE27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA3B11F5-119E-4B5B-B46D-03533F659006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA3B11F5-119E-4B5B-B46D-03533F659006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA3B11F5-119E-4B5B-B46D-03533F659006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA3B11F5-119E-4B5B-B46D-03533F659006}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
